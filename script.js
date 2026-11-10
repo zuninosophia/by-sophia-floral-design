@@ -4,6 +4,22 @@
   const $ = (selector, context = document) => context.querySelector(selector);
   const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Keep cross-page links to the enquiry and inspiration sections accurately positioned.
+  // Wait for the initial page assets so late image/layout shifts do not displace the target.
+  window.addEventListener('load', () => {
+    const targetHash = decodeURIComponent(window.location.hash || '');
+    if (targetHash !== '#enquire' && targetHash !== '#inspiration') return;
+    const target = document.getElementById(targetHash.slice(1));
+    if (!target) return;
+    const align = () => {
+      const root = document.documentElement;
+      const previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      root.style.scrollBehavior = previous;
+    };
+    requestAnimationFrame(() => requestAnimationFrame(align));
+  });
   const header = $('.site-header');
   const menuButton = $('.menu-toggle');
   const mobileNav = $('#mobile-nav');
