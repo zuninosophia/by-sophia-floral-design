@@ -62,3 +62,29 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
 /* Vercel feedback: muted sage rather than the previous minty services background. */
 :root{--studio-services-bg:#d9ddcf}
 .services{background:#d9ddcf}
+
+/* Review round: olive services section, pink process accents and improved editorial contrast. */
+.services{background:#8f9360!important;color:#fffaf1}
+.services .eyebrow,.services .services-intro h2,.services .services-intro h2 em,
+.services .services-intro>p,.services .text-link,.services .service summary,
+.services .service-body,.services .service-body p,.services .service-inclusions,
+.services .services-note,.services .service-number{color:#fffaf1!important}
+.services .service,.services .service:last-of-type{border-color:rgba(255,250,241,.48)!important}
+.services .detail-toggle{color:#fffaf1}
+.process .process-step{border-top:2px solid #e3b6c5}
+.process .process-step>span{color:#ae7588}
+.process .section-heading .eyebrow:before{background:#e3b6c5}
+.editorial-break img{filter:brightness(.47) contrast(1.05)!important;object-position:50% 49%}
+.editorial-break:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,29,21,.43),transparent 75%);pointer-events:none}
+.editorial-break-copy{z-index:1}
+.about-copy .signature{font-family:"Allura","Brush Script MT",cursive!important;font-size:74px!important;font-weight:400!important;font-style:normal!important;letter-spacing:0!important;line-height:1.1!important;transform:rotate(-4deg)!important}
+@media(max-width:650px){.about-copy .signature{font-size:62px!important}}
+/* Recolour existing artwork without modifying the approved logo silhouette. */
+@supports ((-webkit-mask-image:url("")) or (mask-image:url(""))){
+.site-footer .brand,.event-page .detail-footer .footer-logo{background-color:#8f9360;-webkit-mask-image:url("assets/logo-olive.png");mask-image:url("assets/logo-olive.png");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}
+.site-footer .brand img,.event-page .detail-footer .footer-logo img{opacity:0}
+}
+.event-page .event-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;align-items:stretch}
+.event-page .event-photo-grid .event-photo{grid-column:auto!important;aspect-ratio:4/5!important;margin:0!important}
+.event-page .event-photo-grid .event-photo img{object-fit:cover}
+@media(max-width:650px){.event-page .event-photo-grid{grid-template-columns:1fr!important;gap:15px!important}.event-page .event-photo-grid .event-photo{aspect-ratio:4/5!important}}
