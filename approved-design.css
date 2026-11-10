@@ -54,3 +54,7 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
 
 /* Entire philosophy statement in signature olive, preserving italic emphasis. */
 .brand-note p,.brand-note p em{color:var(--studio-olive)!important;}
+
+/* Restore the opening phrase to the original charcoal, retaining olive italic. */
+.brand-note p{color:#353e2f!important;}
+.brand-note p em{color:var(--studio-olive)!important;}
