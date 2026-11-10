@@ -212,3 +212,58 @@ html{scroll-padding-top:88px!important}
   .pelusa-page .event-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
   .about-copy .signature{font-size:56px!important}
 }
+
+/* Original TAN Pearl lettering, outlined from the owner's font so the design
+   displays consistently without a missing webfont asset. */
+.editorial-break-copy p em.tan-vector,
+.amore-page .detail-cta h2 em.tan-vector{
+  display:block!important;
+  font-size:inherit!important;
+  line-height:1!important;
+  font-style:normal!important;
+  letter-spacing:0!important;
+  margin-top:12px;
+}
+.editorial-break-copy p em.tan-vector img{
+  display:block!important;
+  width:clamp(300px,43vw,610px)!important;
+  max-width:82vw!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  filter:none!important;
+}
+.amore-page .detail-cta h2 em.tan-vector img{
+  display:block!important;
+  width:clamp(310px,46vw,570px)!important;
+  max-width:88vw!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  margin:0 auto!important;
+}
+@media(max-width:700px){
+  .editorial-break-copy p em.tan-vector img{width:76vw!important;max-width:76vw!important}
+  .amore-page .detail-cta h2 em.tan-vector img{width:82vw!important;max-width:82vw!important}
+}
+/* Smaller, more natural founder signature and quieter Alice footer. */
+.about-copy .signature{
+  font-family:"La Belle Aurore","Brush Script MT",cursive!important;
+  font-size:clamp(43px,4vw,56px)!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  letter-spacing:0!important;
+  line-height:1.25!important;
+  transform:rotate(-3deg)!important;
+  margin:6px 0 17px!important;
+}
+.site-footer .footer-top>p{
+  font-family:"Alice",Georgia,serif!important;
+  font-size:clamp(14px,1.2vw,17px)!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  letter-spacing:-.005em!important;
+  line-height:1.45!important;
+}
+@media(max-width:520px){.about-copy .signature{font-size:47px!important}}
