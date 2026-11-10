@@ -267,3 +267,18 @@ html{scroll-padding-top:88px!important}
   line-height:1.45!important;
 }
 @media(max-width:520px){.about-copy .signature{font-size:47px!important}}
+
+/* Founder signature: elegant, fine-stroke calligraphy rather than casual handwriting. */
+.about-copy .signature{
+  display:inline-block!important;
+  font-family:"Pinyon Script","Snell Roundhand",cursive!important;
+  font-size:clamp(63px,5.5vw,82px)!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  line-height:1.25!important;
+  letter-spacing:.012em!important;
+  transform:rotate(-4deg)!important;
+  margin:7px 0 16px!important;
+  color:#353e2f!important;
+}
+@media(max-width:520px){.about-copy .signature{font-size:66px!important}}
