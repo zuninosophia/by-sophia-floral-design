@@ -1,0 +1,60 @@
+{
+  "approved_at": "2026-11-10",
+  "branding": {
+    "pink": "#f6e3e3",
+    "olive": "#8f9360",
+    "header": "cream",
+    "gardenEleganceSection": "unchanged"
+  },
+  "hero": {
+    "size": 88,
+    "split": 47,
+    "nav": 100,
+    "logo": 164,
+    "space": 0,
+    "imagePosition": 51,
+    "arrangement": "three"
+  },
+  "intro": {
+    "title": "Not just flowers.\nA feeling.",
+    "lead": "Soft movement. Unexpected details. Colour that comes alive.",
+    "copy": "We believe the most beautiful flowers feel like they belong to you. From a bouquet held close to a table shared with your favourite people, we bring a little of the garden to your celebration.",
+    "size": 74,
+    "space": 112
+  },
+  "portfolio": {
+    "title": "A few moments\nin bloom.",
+    "size": 78,
+    "gap": 28,
+    "ratio": 82,
+    "images": {
+      "amore": "engagement-02.jpg",
+      "pelusa": "pelusa-06.jpg",
+      "milestone": "milestone-03.jpg",
+      "easter": "blooming-easter-01.jpg",
+      "spring": "spring-unscripted-06.jpg"
+    }
+  },
+  "services": {
+    "title": "Considered.\nPersonal.\nBeautifully you.",
+    "size": 74,
+    "bg": "sage"
+  },
+  "editorial": {
+    "image": "editorial-02.jpg",
+    "brightness": 75
+  },
+  "inspiration": {
+    "title": "Every celebration\nhas its own feeling",
+    "size": 72,
+    "image": "editorial-03.jpg",
+    "third": "That’s Amore"
+  },
+  "about": {
+    "title": "A lifelong love\nof beautiful things",
+    "image": "sophia-portrait.jpg",
+    "height": 640,
+    "position": 38,
+    "size": 74
+  }
+}
