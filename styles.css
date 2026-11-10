@@ -190,3 +190,8 @@ h1,h2,h3{font-family:var(--serif)}h1 em,h2 em{font-family:var(--serif);font-styl
  .brand-note p em{font-size:1.09em}
 }
 @media(max-width:360px){.hero h1{font-size:40px}}
+
+/* Approved: subtle olive divider between hero and introduction */
+body:not(.event-page) .intro{position:relative;}
+body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:3.5%;right:3.5%;height:1px;background:#8f9360;pointer-events:none;}
+@media(max-width:750px){body:not(.event-page) .intro::before{top:43px;left:6%;right:6%;}}
