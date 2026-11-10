@@ -48,3 +48,6 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
   }
   .site-header .brand-logo { opacity: 0; }
 }
+
+/* Keep the italic philosophy line readable against the blush band. */
+.brand-note p em{color:#353e2f!important;}
