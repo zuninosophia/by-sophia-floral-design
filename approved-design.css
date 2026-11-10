@@ -31,3 +31,20 @@ body:not(.event-page) .intro{position:relative}
 body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:3.5%;right:3.5%;height:1px;background:#8f9360;pointer-events:none}
 .approved-cta{color:#f7f5ed}
 @media(max-width:750px){body:not(.event-page) .intro::before{top:43px;left:6%;right:6%}}
+
+/* Header wordmark in the original signature olive green (#8f9360). */
+/* Reuse the exact existing logo silhouette; recolour only its header appearance. */
+@supports ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
+  .site-header .brand {
+    background-color: var(--studio-olive);
+    -webkit-mask-image: url("assets/logo-olive.png");
+    mask-image: url("assets/logo-olive.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  .site-header .brand-logo { opacity: 0; }
+}
