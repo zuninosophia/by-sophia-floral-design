@@ -84,10 +84,7 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
 .site-footer .brand,.event-page .detail-footer .footer-logo{background-color:#8f9360;-webkit-mask-image:url("assets/logo-olive.png");mask-image:url("assets/logo-olive.png");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}
 .site-footer .brand img,.event-page .detail-footer .footer-logo img{opacity:0}
 }
-.event-page .event-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;align-items:stretch}
-.event-page .event-photo-grid .event-photo{grid-column:auto!important;aspect-ratio:4/5!important;margin:0!important}
-.event-page .event-photo-grid .event-photo img{object-fit:cover}
-@media(max-width:650px){.event-page .event-photo-grid{grid-template-columns:1fr!important;gap:15px!important}.event-page .event-photo-grid .event-photo{aspect-ratio:4/5!important}}
+/* Portfolio galleries use the original editorial grid from styles.css. */
 
 /* Second review: selective blush-pink emphasis on luxury olive and deep-olive sections. */
 .services .services-intro h2 em{color:#f5cad5!important}
@@ -139,3 +136,21 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
   .about-copy .signature{font-size:100px!important}
   .site-footer .footer-top>p span{font-size:8px;letter-spacing:.11em}
 }
+
+/* Latest review: align hash links precisely below the sticky navigation. */
+html{scroll-padding-top:88px!important}
+#inspiration,#enquire{scroll-margin-top:0!important}
+@media(max-width:800px){html{scroll-padding-top:78px!important}}
+/* Meet Sophia: match the blush of the Spring, Unscripted feature. */
+.about{background:var(--rose)!important}
+/* Brand green, rather than pink, for the three process milestones. */
+.process .process-step>span{color:#8f9360!important}
+.process .process-step{border-top-color:#8f9360!important}
+/* Signature green on the form's primary step buttons. */
+.enquiry-form-wrap .form-actions .button,
+.enquiry-form-wrap .form-actions .button-dark{background:#8f9360!important;color:#fffaf1!important;border-color:#8f9360!important}
+.enquiry-form-wrap .form-actions .button:hover,
+.enquiry-form-wrap .form-actions .button-dark:hover{background:#7a8050!important;border-color:#7a8050!important}
+/* A softer, flowing handwritten signature. */
+.about-copy .signature{font-family:"WindSong","Brush Script MT",cursive!important;font-size:clamp(69px,6.8vw,100px)!important;line-height:1.2!important;letter-spacing:0!important;transform:rotate(-3deg)!important;margin:12px 0 25px!important}
+@media(max-width:750px){.about-copy .signature{font-size:82px!important}}
