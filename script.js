@@ -246,9 +246,9 @@
       name: 'That’s Amore',
       image: 'assets/images/engagement-02.jpg',
       alt: 'Romantic floral details from the That’s Amore engagement celebration',
-      description: 'A romantic celebration in expressive colour: warm rose, pink, soft cream and fresh green, arranged with an artful, gathered feeling.',
-      colours: ['#e9b6b1', '#e98d83', '#f0e1cb', '#9ca47c'],
-      colourNames: 'Warm rose, pink, soft cream and fresh green'
+      description: 'Deep burgundy, expressive reds and soft ivory with a warm, candlelit romance.',
+      colours: ['#621c2c', '#a13c48', '#e9ddcf', '#45232d'],
+      colourNames: 'Deep burgundy, rich red, soft ivory and oxblood'
     }
   };
   const paletteTabs = $$('[role="tab"][data-palette]');
