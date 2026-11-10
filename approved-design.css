@@ -58,3 +58,7 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
 /* Restore the opening phrase to the original charcoal, retaining olive italic. */
 .brand-note p{color:#353e2f!important;}
 .brand-note p em{color:var(--studio-olive)!important;}
+
+/* Vercel feedback: muted sage rather than the previous minty services background. */
+:root{--studio-services-bg:#d9ddcf}
+.services{background:#d9ddcf}
