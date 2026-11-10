@@ -268,7 +268,7 @@
     }
   };
   const paletteTabs = $$('[role="tab"][data-palette]');
-  let selectedPalette = 'romance';
+  let selectedPalette = 'party';
 
   function choosePalette(key, focusTab = false) {
     const palette = palettes[key];
