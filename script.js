@@ -228,7 +228,7 @@
   const palettes = {
     romance: {
       name: 'Soft romance',
-      image: 'assets/images/editorial-03.jpg',
+      image: 'editorial-03.jpg',
       alt: 'Pastel garden flowers in a pair of pink vases on an outdoor table',
       description: 'Blush, buttercream, and a little movement. Gentle colour with a garden-grown spirit.',
       colours: ['#e3b6b0', '#eee1bf', '#b7888b', '#9ca28a'],
@@ -236,7 +236,7 @@
     },
     party: {
       name: 'Garden party',
-      image: 'assets/images/editorial-01.jpg',
+      image: 'editorial-01.jpg',
       alt: 'A woven basket overflowing with pastel flowers, orange roses and trailing greenery',
       description: 'Peach, pink, and a joyful pop of colour. Abundant flowers with a playful, gathered feeling.',
       colours: ['#edb59e', '#dd8f9b', '#e5a54d', '#8b9a6d'],
@@ -244,7 +244,7 @@
     },
     natural: {
       name: 'Naturally yours',
-      image: 'assets/images/editorial-04.jpg',
+      image: 'editorial-04.jpg',
       alt: 'Garden flower centrepieces arranged together on an outdoor table',
       description: 'Layered greens, soft colour, and an easy rhythm. Flowers that feel at home in the garden.',
       colours: ['#e8e5ce', '#bdc6a6', '#8d9b77', '#c2a2ab'],
