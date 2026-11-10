@@ -88,3 +88,23 @@ body:not(.event-page) .intro::before{content:"";position:absolute;top:70px;left:
 .event-page .event-photo-grid .event-photo{grid-column:auto!important;aspect-ratio:4/5!important;margin:0!important}
 .event-page .event-photo-grid .event-photo img{object-fit:cover}
 @media(max-width:650px){.event-page .event-photo-grid{grid-template-columns:1fr!important;gap:15px!important}.event-page .event-photo-grid .event-photo{aspect-ratio:4/5!important}}
+
+/* Second review: selective blush-pink emphasis on luxury olive and deep-olive sections. */
+.services .services-intro h2 em{color:#f5cad5!important}
+.enquiry-section .enquiry-intro h2 em{color:#f1c1ce!important}
+.process .process-step>span{color:#bf7c91!important;font-weight:600}
+.process .process-step{border-top-color:#d9a3b3!important}
+.site-footer .footer-top>p{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(27px,2.65vw,43px);font-weight:400;line-height:1.06;letter-spacing:-.025em}
+.site-footer .footer-top>p em{font-weight:400;color:#8f9360}
+.about-copy .signature{font-family:"Mrs Saint Delafield","Brush Script MT",cursive!important;font-size:clamp(83px,8.5vw,120px)!important;line-height:.9!important;letter-spacing:.01em!important;transform:rotate(-7deg)!important;margin:24px 0 25px!important}
+#inspiration,#enquire{scroll-margin-top:115px}
+@media(max-width:750px){#inspiration,#enquire{scroll-margin-top:88px}.about-copy .signature{font-size:88px!important}}
+/* Editorially varied, balanced Amore gallery: no stranded final photograph. */
+.amore-page .event-photo-grid{grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:22px 20px!important;align-items:start!important}
+.amore-page .event-photo-grid .event-photo{grid-column:span 6!important;aspect-ratio:4/5!important;margin:0!important}
+.amore-page .event-photo-grid .event-photo:nth-child(4n+1){grid-column:span 7!important;aspect-ratio:1.04!important}
+.amore-page .event-photo-grid .event-photo:nth-child(4n+2){grid-column:span 5!important;aspect-ratio:.74!important;margin-top:48px!important}
+.amore-page .event-photo-grid .event-photo:nth-child(4n+3){grid-column:span 5!important;aspect-ratio:.79!important}
+.amore-page .event-photo-grid .event-photo:nth-child(4n+4){grid-column:span 7!important;aspect-ratio:1.06!important;margin-top:38px!important}
+@media(max-width:750px){.amore-page .event-photo-grid{grid-template-columns:1fr 1fr!important;gap:12px!important}.amore-page .event-photo-grid .event-photo{grid-column:span 1!important;aspect-ratio:4/5!important;margin:0!important}}
+@media(max-width:500px){.amore-page .event-photo-grid{grid-template-columns:1fr!important}.amore-page .event-photo-grid .event-photo{grid-column:span 1!important;aspect-ratio:4/5!important;margin:0!important}}
