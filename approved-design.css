@@ -154,3 +154,61 @@ html{scroll-padding-top:88px!important}
 /* A softer, flowing handwritten signature. */
 .about-copy .signature{font-family:"WindSong","Brush Script MT",cursive!important;font-size:clamp(69px,6.8vw,100px)!important;line-height:1.2!important;letter-spacing:0!important;transform:rotate(-3deg)!important;margin:12px 0 25px!important}
 @media(max-width:750px){.about-copy .signature{font-size:82px!important}}
+
+/* Comment review: naturally written, restrained signature. */
+.about-copy .signature{
+  font-family:"Sacramento","Brush Script MT",cursive!important;
+  font-size:clamp(50px,4.9vw,69px)!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  letter-spacing:.01em!important;
+  line-height:1.12!important;
+  transform:rotate(-4deg)!important;
+  margin:11px 0 21px!important;
+}
+/* Tan Pearl is the studio's display face; keep the editorial italic delicate. */
+.editorial-break-copy p em{
+  font-family:"Tan Pearl","Alice",Georgia,serif!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  font-size:.89em!important;
+  letter-spacing:-.045em!important;
+  line-height:1.05!important;
+}
+/* Editorial Alice rather than sans-serif for the closing brand statement. */
+.site-footer .footer-top>p{
+  font-family:"Alice",Georgia,serif!important;
+  font-size:clamp(18px,1.95vw,27px)!important;
+  font-weight:400!important;
+  font-style:normal!important;
+  letter-spacing:-.025em!important;
+  line-height:1.25!important;
+}
+/* No gaps from staggered margins or unequal row heights in the two reviewed galleries. */
+.amore-page .event-photo-grid,
+.pelusa-page .event-photo-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+.pelusa-page .event-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.amore-page .event-photo-grid>.event-photo,
+.pelusa-page .event-photo-grid>.event-photo{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  aspect-ratio:4/5!important;
+  margin:0!important;
+  height:auto!important;
+  min-width:0!important;
+}
+.amore-page .event-photo-grid>.event-photo img,
+.pelusa-page .event-photo-grid>.event-photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:800px){
+  .pelusa-page .event-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+  .amore-page .event-photo-grid,
+  .pelusa-page .event-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .about-copy .signature{font-size:56px!important}
+}
