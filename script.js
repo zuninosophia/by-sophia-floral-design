@@ -514,7 +514,7 @@
       heading.textContent = 'Your enquiry is on its way';
       const message = document.createElement('p');
       message.className = 'review-intro';
-      message.textContent = 'Thank you for sharing your ideas. Sophia will be in touch soon!';
+      message.textContent = 'Thank you for sharing your ideas. We’ll be in touch soon!';
       review.append(heading, message);
       form.reset();
     } catch (error) {
