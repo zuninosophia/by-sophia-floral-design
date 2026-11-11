@@ -514,7 +514,7 @@
       heading.textContent = 'Your enquiry is on its way';
       const message = document.createElement('p');
       message.className = 'review-intro';
-      message.textContent = 'Thank you for sharing your ideas. We’ll be in touch soon!';
+      message.textContent = 'We’re so glad you found your way here. We can’t wait to bring your floral vision to life.';
       review.append(heading, message);
       form.reset();
     } catch (error) {
