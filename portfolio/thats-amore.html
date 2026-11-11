@@ -36,7 +36,7 @@
 
 
 .event-page .event-photo-grid>.event-photo:has(img[src*="amore-new-3182"]){grid-column:span 2!important;aspect-ratio:4/3!important}
-.event-page .event-photo-grid>.event-photo img[src*="amore-new-3182"]{object-position:100% 0!important}
+.event-page .event-photo-grid>.event-photo img[src*="amore-new-3182"]{object-position:50% 0!important}
 .event-page .event-photo-grid>.amore-film{grid-column:span 1!important;aspect-ratio:9/16!important}
 @media(max-width:700px){.event-page .event-photo-grid>.event-photo:has(img[src*="amore-new-3182"]){grid-column:span 2!important}}
 
@@ -60,6 +60,9 @@
 .amore-page .event-photo-grid>.event-photo:has(img[src*="amore-new-3182"]){grid-column:span 2!important;aspect-ratio:1.5!important}
 .amore-page .event-photo-grid>.amore-film{grid-column:auto!important;aspect-ratio:9/16!important;margin:0!important}
 }
+
+/* Floral-first framing for the drinks-bar arrangement, preserving the original photo */
+.amore-page .event-photo-grid>.event-photo:has(img[src*="amore-new-3182"]) img{object-position:center top!important}
 
 /* Final gallery containment and paired layout: override legacy grid rules */
 @media(min-width:801px){
