@@ -323,3 +323,7 @@ html{scroll-padding-top:88px!important}
 /* Slightly reduce philosophy headline size, preserving typography, wording, and colours. */
 .brand-note p{font-size:clamp(30px,3.05vw,48px)!important}
 @media(max-width:700px){.brand-note p{font-size:clamp(29px,7.5vw,39px)!important}}
+
+/* Center the philosophy statement within its grid column, without changing its font or colours. */
+.brand-note-inner>p{justify-self:center;text-align:center}
+@media(max-width:650px){.brand-note-inner>p{justify-self:start;text-align:left}}
