@@ -509,6 +509,7 @@
       const response = await fetch(form.action, { method: 'POST', body: payload, headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error('Submission failed');
       review.replaceChildren();
+      review.classList.add('enquiry-success');
       const heading = document.createElement('h3');
       heading.textContent = 'Your enquiry is on its way';
       const message = document.createElement('p');
