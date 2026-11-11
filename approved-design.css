@@ -1,5 +1,5 @@
 /* APPROVED BY SOPHIA DESIGN — visual studio selections, applied to website. */
-:root{--studio-pink:#f6e3e3;--studio-olive:#8f9360;--studio-ink:#353e2f;--studio-cream:#f7f5ed;--studio-intro-size:74px;--studio-intro-space:112px;--studio-grid-gap:28px;--studio-image-ratio:0.82;--studio-services-bg:#e9ecdf;--studio-services-size:74px;--studio-editorial-bright:.75;--studio-about-height:640px;--studio-about-position:38%;--studio-about-size:74px;--studio-palette-size:72px;--studio-portfolio-size:78px;--studio-pink-accent:0.4;}
+:root{--studio-pink:#f6e3e3;--studio-olive:#8f9360;--studio-ink:#373e31;--studio-cream:#f7f5ed;--studio-intro-size:74px;--studio-intro-space:112px;--studio-grid-gap:28px;--studio-image-ratio:0.82;--studio-services-bg:#e9ecdf;--studio-services-size:74px;--studio-editorial-bright:.75;--studio-about-height:640px;--studio-about-position:38%;--studio-about-size:74px;--studio-palette-size:72px;--studio-portfolio-size:78px;--studio-pink-accent:0.4;}
 .announcement{height:33px;background:var(--studio-pink)!important;color:var(--studio-ink)!important;display:flex;align-items:center;padding:0 4.4%;font-size:9px;letter-spacing:.12em}.announcement a{color:var(--studio-ink)!important}
 .site-header{height:100px;min-height:100px;padding:0 4.4%;background:var(--studio-cream)!important;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcdad0}.brand{display:block;width:164px;flex:0 0 164px}.brand-logo{width:164px;max-width:100%;height:auto;object-fit:contain}.desktop-nav{margin-left:0}.site-header .nav-enquire{font-size:12px}
 .approved-hero{display:grid;grid-template-columns:47% 53%;height:calc(100svh - 133px);min-height:680px;max-height:1080px;background:var(--studio-cream);color:var(--studio-ink)}
@@ -327,3 +327,7 @@ html{scroll-padding-top:88px!important}
 /* Center the philosophy statement within its grid column, without changing its font or colours. */
 .brand-note-inner>p{justify-self:center;text-align:center}
 @media(max-width:650px){.brand-note-inner>p{justify-self:start;text-align:left}}
+
+/* Editorial forest-green typography trial, sampled from the reference screenshot. */
+body{color:#373e31}
+.announcement,.announcement a,.site-header,.detail-nav,.desktop-nav,.approved-hero,.approved-hero-copy,.event-hero-copy,.event-story,.event-gallery-heading,.portfolio,.intro,.about-copy,.process,.palette-content,.enquiry-section,.site-footer{--ink:#373e31;--studio-ink:#373e31}
