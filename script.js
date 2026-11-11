@@ -314,7 +314,8 @@
   const review = $('#form-review');
   const errorSummary = $('#form-error');
   let currentStep = 1;
-  let draftText = '';
+  let enquiryEntries = [];
+  let isSending = false;
 
   function showStep(number, focus = true) {
     currentStep = Math.max(1, Math.min(steps.length, number));
@@ -457,12 +458,8 @@
       pair.append(term, description);
       summary.append(pair);
     });
-    const subject = `Floral enquiry — ${value('occasion')} — ${occasionDate()}`;
-    const body = `Hello Sophia,\n\nI’d love to discuss flowers for my celebration. Here are a few details:\n\n${entries.map(([label, text]) => `${label}: ${text}`).join('\n\n')}\n\nThank you,\n${value('name')}`;
-    draftText = `To: bysophiafloraldesign@gmail.com\nSubject: ${subject}\n\n${body}`;
-    $('#email-draft').href = `mailto:bysophiafloraldesign@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    enquiryEntries = entries;
     $('#copy-status').textContent = '';
-    $('#copy-fallback')?.remove();
     steps.forEach(step => { step.hidden = true; });
     progress.forEach(indicator => {
       indicator.classList.remove('current');
@@ -494,44 +491,37 @@
   });
 
   $('#edit-enquiry')?.addEventListener('click', () => showStep(3));
-  $('#copy-enquiry')?.addEventListener('click', async () => {
-    if (!draftText) return;
-    let copied = false;
+  $('#send-enquiry')?.addEventListener('click', async () => {
+    if (isSending || !form || !enquiryEntries.length) return;
+    isSending = true;
+    const button = $('#send-enquiry');
+    const status = $('#copy-status');
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.textContent = '';
     try {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(draftText);
-        copied = true;
-      }
-    } catch { /* Local file contexts may require the selection-based fallback. */ }
-    if (!copied) {
-      const temporary = document.createElement('textarea');
-      temporary.value = draftText;
-      temporary.setAttribute('aria-label', 'Enquiry message to copy');
-      temporary.style.cssText = 'position:fixed;left:-9999px;top:0';
-      document.body.append(temporary);
-      temporary.focus();
-      temporary.select();
-      try { copied = document.execCommand('copy'); } catch { copied = false; }
-      temporary.remove();
-      $('#copy-enquiry').focus({ preventScroll: true });
-    }
-    if (copied) {
-      $('#copy-status').textContent = 'Enquiry copied. Paste it into an email to Sophia whenever you’re ready.';
-    } else {
-      let fallback = $('#copy-fallback');
-      if (!fallback) {
-        fallback = document.createElement('textarea');
-        fallback.id = 'copy-fallback';
-        fallback.className = 'copy-fallback';
-        fallback.readOnly = true;
-        fallback.rows = 8;
-        fallback.setAttribute('aria-label', 'Your enquiry message — select and copy');
-        $('#copy-status').insertAdjacentElement('afterend', fallback);
-      }
-      fallback.value = draftText;
-      fallback.focus();
-      fallback.select();
-      $('#copy-status').textContent = 'Select and copy the message below, then paste it into your email.';
+      const payload = new FormData();
+      enquiryEntries.forEach(([label, detail]) => payload.append(label, detail));
+      payload.append('_subject', 'New floral enquiry — ' + value('occasion') + ' — ' + value('name'));
+      payload.append('_replyto', value('email'));
+      payload.append('email', value('email'));
+      payload.append('_gotcha', form.querySelector('[name="_gotcha"]')?.value || '');
+      const response = await fetch(form.action, { method: 'POST', body: payload, headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('Submission failed');
+      review.replaceChildren();
+      const heading = document.createElement('h3');
+      heading.textContent = 'Your enquiry is on its way';
+      const message = document.createElement('p');
+      message.className = 'review-intro';
+      message.textContent = 'Thank you for sharing your ideas. Sophia will be in touch soon!';
+      review.append(heading, message);
+      form.reset();
+    } catch (error) {
+      status.textContent = 'Your enquiry could not be sent. Please try again, or email bysophiafloraldesign@gmail.com directly.';
+      button.disabled = false;
+      button.textContent = 'Try sending again ↗';
+    } finally {
+      isSending = false;
     }
   });
 
