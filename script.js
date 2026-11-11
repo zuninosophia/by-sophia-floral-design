@@ -415,7 +415,7 @@
   $('.palette-select')?.addEventListener('click', () => {
     const palette = palettes[selectedPalette];
     const mood = $('#mood');
-    if (mood) mood.value = palette.name;
+    if (mood) { const colourDirection = { romance: 'Soft pastels', party: 'Bright & colourful', amore: 'Rich & romantic' }; mood.value = colourDirection[selectedPalette] || 'Still dreaming'; }
     if (review && !review.hidden) showStep(2, false);
     $('#enquire')?.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
     toast(`${palette.name} added to your enquiry. Tell Sophia what you’re imagining.`);
