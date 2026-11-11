@@ -331,3 +331,11 @@ html{scroll-padding-top:88px!important}
 /* Editorial forest-green typography trial, sampled from the reference screenshot. */
 body{color:#373e31}
 .announcement,.announcement a,.site-header,.detail-nav,.desktop-nav,.approved-hero,.approved-hero-copy,.event-hero-copy,.event-story,.event-gallery-heading,.portfolio,.intro,.about-copy,.process,.palette-content,.enquiry-section,.site-footer{--ink:#373e31;--studio-ink:#373e31}
+
+/* Finishing touches: visible keyboard focus without changing the resting design. */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid #8f9360;outline-offset:4px}
+.event-photo:focus-visible{outline-offset:3px}
+@media(max-width:700px){
+  .photo-lightbox-close,.photo-lightbox-prev,.photo-lightbox-next,.menu-toggle,.soundtrack-tab{touch-action:manipulation}
+  .photo-lightbox-close,.photo-lightbox-prev,.photo-lightbox-next{min-width:44px;min-height:44px}
+}
