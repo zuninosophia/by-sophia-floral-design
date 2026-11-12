@@ -22,6 +22,20 @@
 .event-page .soundtrack-close{background:transparent;border:0;font-size:24px;line-height:1;cursor:pointer;color:inherit;padding:0 3px}
 .event-page .soundtrack-panel iframe{display:block;width:100%;height:175px;border:0;border-radius:8px}
 @media(max-width:700px){.event-page .floating-soundtrack{right:12px;bottom:12px}.event-page .soundtrack-tab{padding:11px 14px}.event-page .soundtrack-panel{width:min(340px,calc(100vw - 24px))}}
+
+/* Mobile gallery consistency: match the paired That's Amore layout. Desktop remains unchanged. */
+@media (max-width:800px){
+  body.event-page .event-gallery .event-photo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:start!important;grid-auto-flow:row!important}
+  body.event-page .event-gallery .event-photo-grid>.event-photo{grid-column:span 1!important;grid-row:auto!important;width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important;margin:0!important;aspect-ratio:4/5!important;overflow:hidden!important;align-self:start!important}
+  body.event-page .event-gallery .event-photo-grid>.event-photo:nth-child(4n+3),
+  body.event-page .event-gallery .event-photo-grid>.event-photo:nth-child(4n+4){aspect-ratio:5/4!important}
+  body.event-page .event-gallery .event-photo-grid>.event-photo>img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+  body.event-page .event-gallery .event-photo-grid>.carlos-film,
+  body.event-page .event-gallery .event-photo-grid>.amore-film{grid-column:span 1!important;grid-row:auto!important;justify-self:stretch!important;aspect-ratio:9/16!important;position:relative!important;overflow:hidden!important}
+  body.event-page .event-gallery .event-photo-grid>.carlos-film video,
+  body.event-page .event-gallery .event-photo-grid>.amore-film video{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+  body.event-page .event-gallery .event-photo-grid>.carlos-film .film-controls{opacity:1}
+}
 </style><style>
 /* Celebrating Pelusa: editorial rhythm with complete, balanced photo rows. */
 body.event-page.pelusa-page .event-gallery .event-photo-grid{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:18px!important;align-items:stretch!important}
