@@ -195,3 +195,12 @@ h1,h2,h3{font-family:var(--serif)}h1 em,h2 em{font-family:var(--serif);font-styl
 #form-review.enquiry-success { flex:1; min-height:420px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
 #form-review.enquiry-success h3 { max-width:100%; }
 #form-review.enquiry-success .review-intro { max-width:460px; }
+
+/* Keep portfolio lightbox navigation visible and thumb-friendly on mobile. */
+@media (max-width: 767px){
+.photo-lightbox .photo-lightbox-prev,.photo-lightbox .photo-lightbox-next{position:absolute;top:50%;bottom:auto;transform:translateY(-50%);width:44px;height:44px;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;z-index:5;background:rgba(21,25,19,.76);border:1px solid rgba(255,255,255,.65);border-radius:50%;color:#fff;touch-action:manipulation}
+.photo-lightbox .photo-lightbox-prev{left:max(8px,env(safe-area-inset-left))}
+.photo-lightbox .photo-lightbox-next{right:max(8px,env(safe-area-inset-right))}
+.photo-lightbox img{max-width:calc(100% - 76px);max-height:calc(100dvh - 120px)}
+.photo-lightbox .photo-lightbox-count{bottom:max(22px,env(safe-area-inset-bottom))}
+}
