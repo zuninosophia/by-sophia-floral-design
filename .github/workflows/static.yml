@@ -39,6 +39,8 @@ jobs:
           ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-2039.mp4 -frames:v 1 -q:v 3 assets/images/carlos-2039.jpg
           ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-1952.mp4 -frames:v 1 -q:v 3 assets/images/carlos-1952.jpg
           ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-1950.mp4 -frames:v 1 -q:v 3 assets/images/carlos-1950.jpg
+          ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/amore-3155.mp4 -frames:v 1 -q:v 3 assets/images/amore-3155.jpg
+          ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/amore-3108.mp4 -frames:v 1 -q:v 3 assets/images/amore-3108.jpg
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
