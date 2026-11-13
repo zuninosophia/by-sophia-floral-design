@@ -400,3 +400,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   }
   #inspiration .palette-select { grid-column: 1 / -1; justify-self: start; margin-top: 16px; }
 }
+
+/* Keep the homepage EXPLORE label and arrow together on mobile, as on desktop. */
+@media (max-width:750px){
+  .approved-hero-photo .approved-photo-round{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:nowrap;
+    gap:5px;
+    white-space:nowrap;
+  }
+  .approved-hero-photo .approved-photo-round .text-arrow-icon{
+    display:block;
+    flex:0 0 15px;
+    width:15px;
+    height:15px;
+  }
+}
