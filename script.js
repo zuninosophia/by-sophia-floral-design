@@ -421,7 +421,7 @@
   $('.palette-select')?.addEventListener('click', () => {
     const palette = palettes[selectedPalette];
     const mood = $('#mood');
-    if (mood) { const colourDirection = { romance: 'Soft pastels', party: 'Bright & colourful', natural: 'Seasonal & organic' }; mood.value = colourDirection[selectedPalette] || 'Still dreaming'; }
+    if (mood) { const colourDirection = { romance: 'Soft pastels', party: 'Bright & colourful', natural: 'Rich & romantic' }; mood.value = colourDirection[selectedPalette] || 'Still dreaming'; }
     if (review && !review.hidden) showStep(2, false);
     $('#enquire')?.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
     toast(`${palette.name} added to your enquiry. Tell Sophia what you’re imagining.`);
