@@ -445,6 +445,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* Smaller, more balanced navigation lettering on mobile only. */
 @media(max-width:800px){
-  .mobile-nav a:not(:last-child){font-size:clamp(25px,7vw,30px);line-height:1.14;padding:10px 0}
+  .mobile-nav a:not(:last-child){font-size:clamp(21px,5.8vw,25px);line-height:1.18;padding:9px 0}
   .mobile-nav a:last-child{font-size:12px}
 }
