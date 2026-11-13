@@ -4,22 +4,27 @@
   const $ = (selector, context = document) => context.querySelector(selector);
   const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  // Keep cross-page links to the enquiry and inspiration sections accurately positioned.
-  // Wait for the initial page assets so late image/layout shifts do not displace the target.
-  window.addEventListener('load', () => {
-    const targetHash = decodeURIComponent(window.location.hash || '');
-    if (targetHash !== '#enquire' && targetHash !== '#inspiration' && targetHash !== '#enquiry-form-start') return;
-    const target = document.getElementById(targetHash.slice(1));
+  // On iOS Safari, native hash scrolling can land deep inside the multi-step
+  // form while images/fonts and browser history restoration are settling.
+  // Reposition after layout stabilizes, including when returning from bfcache.
+  const alignDeepLink = () => {
+    const hash = decodeURIComponent(window.location.hash || '');
+    if (!['#enquire', '#inspiration', '#enquiry-form-start'].includes(hash)) return;
+    const target = document.getElementById(hash.slice(1));
     if (!target) return;
-    const align = () => {
-      const root = document.documentElement;
-      const previous = root.style.scrollBehavior;
-      root.style.scrollBehavior = 'auto';
-      target.scrollIntoView({ block: 'start', behavior: 'instant' });
-      root.style.scrollBehavior = previous;
+    const move = () => {
+      const header = document.querySelector('.site-header');
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const y = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+      window.scrollTo({ top: Math.max(0, y), behavior: 'instant' });
     };
-    requestAnimationFrame(() => requestAnimationFrame(align));
-  });
+    move();
+    requestAnimationFrame(() => requestAnimationFrame(move));
+    [150, 450, 1000].forEach(ms => setTimeout(move, ms));
+  };
+  window.addEventListener('load', alignDeepLink);
+  window.addEventListener('pageshow', alignDeepLink);
+  window.addEventListener('hashchange', alignDeepLink);
   const header = $('.site-header');
   const menuButton = $('.menu-toggle');
   const mobileNav = $('#mobile-nav');
