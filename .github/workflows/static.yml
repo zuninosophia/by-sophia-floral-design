@@ -31,6 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate real video thumbnail frames
+        run: |
+          set -e
+          ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-2039.mp4 -frames:v 1 -q:v 3 assets/images/carlos-2039.jpg
+          ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-1952.mp4 -frames:v 1 -q:v 3 assets/images/carlos-1952.jpg
+          ffmpeg -hide_banner -loglevel error -y -ss 1 -i assets/videos/carlos-1950.mp4 -frames:v 1 -q:v 3 assets/images/carlos-1950.jpg
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
