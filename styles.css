@@ -204,3 +204,6 @@ h1,h2,h3{font-family:var(--serif)}h1 em,h2 em{font-family:var(--serif);font-styl
 .photo-lightbox img{max-width:calc(100% - 76px);max-height:calc(100dvh - 120px)}
 .photo-lightbox .photo-lightbox-count{bottom:max(22px,env(safe-area-inset-bottom))}
 }
+
+/* Allow a small breathing space above the form when arriving from portfolio CTAs. */
+#enquiry-form-start{scroll-margin-top:18px}
