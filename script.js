@@ -8,7 +8,7 @@
   // Wait for the initial page assets so late image/layout shifts do not displace the target.
   window.addEventListener('load', () => {
     const targetHash = decodeURIComponent(window.location.hash || '');
-    if (targetHash !== '#enquire' && targetHash !== '#inspiration') return;
+    if (targetHash !== '#enquire' && targetHash !== '#inspiration' && targetHash !== '#enquiry-form-start') return;
     const target = document.getElementById(targetHash.slice(1));
     if (!target) return;
     const align = () => {
