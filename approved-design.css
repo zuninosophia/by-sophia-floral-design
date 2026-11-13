@@ -425,3 +425,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .announcement>a span{display:inline-flex;align-items:center;justify-content:center;margin-left:0}
   .announcement>a .text-arrow-icon{display:block;width:12px;height:12px;flex:none}
 }
+
+/* Homepage Explore circle: keep label and arrow together at every screen size. */
+.approved-hero-photo .approved-photo-round{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  gap:4px;
+  white-space:nowrap;
+}
+.approved-hero-photo .approved-photo-round .text-arrow-icon{
+  display:block;
+  width:13px;
+  height:13px;
+  flex:0 0 13px;
+}
