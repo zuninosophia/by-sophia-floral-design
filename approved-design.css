@@ -418,3 +418,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     height:15px;
   }
 }
+
+/* Mobile announcement: keep the enquiry arrow neatly beside its label. */
+@media(max-width:800px){
+  .announcement>a{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;flex-shrink:0}
+  .announcement>a span{display:inline-flex;align-items:center;justify-content:center;margin-left:0}
+  .announcement>a .text-arrow-icon{display:block;width:12px;height:12px;flex:none}
+}
