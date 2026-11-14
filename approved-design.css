@@ -466,3 +466,53 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     radial-gradient(ellipse at 78% 70%, rgba(139,111,92,.035), transparent 62%),
     repeating-linear-gradient(0deg, rgba(100,89,70,.01) 0px, rgba(100,89,70,.01) 1px, transparent 1px, transparent 6px);
 }
+
+
+/* Vintage floral direction: visibly tactile cream + botanical accents.
+   Scoped to existing surfaces; all imagery, hero crops, type and layout remain unchanged. */
+:root {
+  --sophia-paper-grain: repeating-linear-gradient(3deg, rgba(102,91,68,.027) 0px, rgba(102,91,68,.027) 1px, transparent 1px, transparent 4px);
+}
+#intro.intro,
+#inspiration.palette-section {
+  background-color: #f5f1e8 !important;
+  background-image:
+    radial-gradient(ellipse at 12% 18%, rgba(179,151,109,.13), transparent 54%),
+    radial-gradient(ellipse at 88% 78%, rgba(163,142,113,.095), transparent 58%),
+    repeating-linear-gradient(90deg, rgba(111,94,66,.023) 0 1px, transparent 1px 5px),
+    var(--sophia-paper-grain) !important;
+}
+#inspiration.palette-section {
+  box-shadow: 0 0 0 100vmax #f5f1e8;
+  clip-path: inset(0 -100vmax);
+}
+/* The vintage floral banner is an accent, not a busy reading surface. */
+.brand-note {
+  background-color: #87946e !important;
+  background-image:
+    linear-gradient(rgba(103,120,82,.78), rgba(103,120,82,.78)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220' viewBox='0 0 360 220'%3E%3Cg fill='none' stroke='%23f2dfd5' stroke-width='2.2' opacity='.65'%3E%3Cpath d='M-25 198Q55 145 68 83T150 -18M155 235Q197 161 259 115T391 25M22 0Q73 48 130 40T210 102'/%3E%3Cpath d='M68 83q-29-39-47-26q12 29 47 26M68 83q33-37 47-19q-15 27-47 19M257 117q-29-38-47-25q11 29 47 25M257 117q32-36 47-17q-14 26-47 17'/%3E%3C/g%3E%3Cg fill='%23f5dfd7' opacity='.74'%3E%3Cpath d='M147 38c-19-21-33 1-15 13-23 1-15 25 4 18 0 21 26 18 27-1 20 6 29-17 7-22 8-18-14-29-23-8Z'/%3E%3Cpath d='M290 69c-15-18-27 1-12 11-18 1-12 21 4 15 0 18 22 15 22-1 17 5 24-14 6-18 6-16-12-24-20-7Z'/%3E%3Cpath d='M56 177c-15-18-27 1-12 11-18 1-12 21 4 15 0 18 22 15 22-1 17 5 24-14 6-18 6-16-12-24-20-7Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, 360px 220px;
+}
+.brand-note-kicker,.brand-note-caption { color: #fff3eb !important; }
+.brand-note p,.brand-note p em { color: #fff7ef !important; text-shadow: 0 1px 3px rgba(42,54,35,.25); }
+/* Dark textile-inspired floral accent on the inspiration content panel,
+   with a readable paper surface inset over it. */
+#inspiration .palette-content {
+  position: relative;
+  isolation: isolate;
+}
+#inspiration .palette-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -22px -28px;
+  border: 1px solid rgba(94,69,58,.22);
+  background-color: #f5f1e8;
+  background-image: radial-gradient(ellipse at 70% 30%,rgba(178,147,115,.08),transparent 65%),var(--sophia-paper-grain);
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  #inspiration .palette-content::before { inset: -12px -10px; }
+  .brand-note { background-size: auto, 260px 159px; }
+}
