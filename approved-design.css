@@ -623,36 +623,3 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   transform: scale(1.10) !important;
   transform-origin: 50% 46% !important;
 }
-
-/* Airy botanical vine, confined to the hero copy and existing introduction.
-   Decorative only: no grid, typography, image, or section sizing changes. */
-#hero .approved-hero-copy::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background:url("assets/botanical-vine-flow.svg") no-repeat left top;
-  background-size:100% 100%;
-  opacity:.68;
-}
-#hero .approved-hero-inner,
-#hero .approved-hero-bottom { position:relative; z-index:1; }
-#intro.intro::after {
-  content:"";
-  position:absolute;
-  top:74px;
-  left:2.7%;
-  width:min(49vw,790px);
-  height:245px;
-  background:url("assets/botanical-vine-intro.svg") no-repeat left top / contain;
-  opacity:.70;
-  pointer-events:none;
-  z-index:0;
-}
-#intro.intro > .eyebrow,
-#intro.intro > .intro-layout { position:relative; z-index:1; }
-@media(max-width:750px){
-  #hero .approved-hero-copy::before { background-size:100% 100%; opacity:.34; }
-  #intro.intro::after { top:30px;left:3%;width:87%;height:140px;opacity:.35; }
-}
