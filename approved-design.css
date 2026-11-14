@@ -585,3 +585,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
+
+/* Editorial 'moments bloom' banner: vintage embroidered floral linen. */
+.editorial-break.editorial-break-full {
+  background-color: #4c3026 !important;
+  background-image: linear-gradient(rgba(39,25,20,.25),rgba(39,25,20,.25)), url("Vintage%20Embroidered%20Floral%20Linen%20Pattern.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.editorial-break.editorial-break-full > img { opacity: 0 !important; }
+.editorial-break.editorial-break-full .editorial-break-copy { background: transparent !important; }
+.editorial-break.editorial-break-full .editorial-statement,
+.editorial-break.editorial-break-full .editorial-statement span { color: #fff9ed !important; text-shadow: 0 2px 7px rgba(28,17,14,.6) !important; }
