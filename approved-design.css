@@ -546,3 +546,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   color: #fff9f0 !important;
   text-shadow: 0 1px 3px rgba(29,39,25,.45) !important;
 }
+
+/* Seamless philosophy banner: one continuous image, no tiled joins. */
+.brand-note {
+  background-image: linear-gradient(rgba(45,57,35,.20), rgba(45,57,35,.20)), url("Soft%20Pink%20Florals%20on%20Olive%20Green.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
