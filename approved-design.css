@@ -518,20 +518,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 
 
-/* By Sophia hero — actual uploaded embossed cream damask.
-   Intentionally confined to the copy half of the hero.
-   Preserve hero grid, typography, floral image crop and mobile arrangements. */
+/* By Sophia hero: warm cream textured paper, copy panel only. */
 .approved-hero .approved-hero-copy {
-  background-color: #f8f3e7;
-  background-image:
-    linear-gradient(rgba(251,248,240,.18), rgba(251,248,240,.18)),
-    url("Embossed%20Cream%20Damask%20Wallpaper.png");
-  background-size: auto, 840px auto;
-  background-position: center, center top;
-  background-repeat: repeat, repeat;
-}
-@media (max-width: 800px) {
-  .approved-hero .approved-hero-copy {
-    background-size: auto, 620px auto;
-  }
+  background-color: #f8f3e9;
+  background-image: url("Warm%20Cream%20Textured%20Paper.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
