@@ -529,11 +529,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* Vintage embroidered floral textile for the slim announcement banner. */
 .announcement {
-  background-color: #563629 !important;
-  background-image: linear-gradient(rgba(46,29,24,.32), rgba(46,29,24,.32)), url("Vintage%20Embroidered%20Floral%20Linen%20Pattern.png") !important;
+  background-color: #e9bda9 !important;
+  background-image: linear-gradient(rgba(247,222,207,.18), rgba(247,222,207,.18)), url("Impressionistic%20Blush%20Floral%20Canvas.png") !important;
   background-position: center center !important;
-  background-size: auto, 480px auto !important;
+  background-size: auto, 900px auto !important;
   background-repeat: repeat !important;
-  color: #fff9ec !important;
+  color: #354331 !important;
 }
-.announcement a, .announcement span { color: #fff9ec !important; }
+.announcement a, .announcement span { color: #354331 !important; }
