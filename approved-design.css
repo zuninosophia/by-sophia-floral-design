@@ -527,3 +527,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-repeat: no-repeat;
 }
 
+
+/* Restore the introduction's original flat cream surface. */
+#intro.intro {
+  background-color: #f7f5ed !important;
+  background-image: none !important;
+}
