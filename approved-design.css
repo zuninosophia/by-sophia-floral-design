@@ -598,3 +598,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .editorial-break.editorial-break-full .editorial-break-copy { background: transparent !important; }
 .editorial-break.editorial-break-full .editorial-statement,
 .editorial-break.editorial-break-full .editorial-statement span { color: #fff9ed !important; text-shadow: 0 2px 7px rgba(28,17,14,.6) !important; }
+
+/* Restore flat original cream to homepage header and hero; remove photo-edge glow. */
+.site-header,
+.approved-hero,
+.approved-hero .approved-hero-copy {
+  background: #f7f5ed !important;
+  background-image: none !important;
+}
+.approved-hero-photo::before,
+.approved-hero-photo::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.approved-hero-photo > img {
+  transform: none !important;
+  filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  object-position: 51% 49% !important;
+}
