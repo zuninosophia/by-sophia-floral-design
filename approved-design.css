@@ -598,3 +598,32 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .editorial-break.editorial-break-full .editorial-break-copy { background: transparent !important; }
 .editorial-break.editorial-break-full .editorial-statement,
 .editorial-break.editorial-break-full .editorial-statement span { color: #fff9ed !important; text-shadow: 0 2px 7px rgba(28,17,14,.6) !important; }
+
+/* Homepage hero refresh: original sunlit basket photo and cohesive paper header. */
+.site-header {
+  background-color: #f8f3e9 !important;
+  background-image: url("Warm%20Cream%20Textured%20Paper.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.approved-hero-photo > img {
+  object-fit: cover !important;
+  object-position: 51% 39% !important;
+  transform: scale(1.13);
+  transform-origin: 51% 39%;
+}
+.approved-hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 17%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right, #f8f3e9 0%, rgba(248,243,233,.68) 35%, rgba(248,243,233,0) 100%);
+}
+@media (max-width: 750px) {
+  .approved-hero-photo > img { object-position: 50% 37% !important; transform: scale(1.08); transform-origin: 50% 37%; }
+  .approved-hero-photo::before { display: none; }
+  .site-header { background-size: cover !important; }
+}
