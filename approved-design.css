@@ -620,4 +620,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   mask-image: none !important;
   -webkit-mask-image: none !important;
   object-position: 51% 49% !important;
+  transform: scale(1.10) !important;
+  transform-origin: 50% 46% !important;
 }
