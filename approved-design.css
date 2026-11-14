@@ -533,3 +533,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-color: #f7f5ed !important;
   background-image: none !important;
 }
+
+/* Uploaded soft pink florals on olive: philosophy banner only. */
+.brand-note {
+  background-color: #78865a !important;
+  background-image: linear-gradient(rgba(45,57,35,.22), rgba(45,57,35,.22)), url("Soft%20Pink%20Florals%20on%20Olive%20Green.png") !important;
+  background-size: auto, 820px auto !important;
+  background-position: center center !important;
+  background-repeat: repeat !important;
+}
+.brand-note-kicker, .brand-note-caption, .brand-note p, .brand-note p em {
+  color: #fff9f0 !important;
+  text-shadow: 0 1px 3px rgba(29,39,25,.45) !important;
+}
