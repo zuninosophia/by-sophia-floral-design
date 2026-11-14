@@ -448,3 +448,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .mobile-nav a:not(:last-child){font-size:clamp(21px,5.8vw,25px);line-height:1.18;padding:9px 0}
   .mobile-nav a:last-child{font-size:12px}
 }
+
+
+/* By Sophia vintage floral refinement / step 1: quiet paper texture.
+   Only the homepage introduction and philosophy strip receive the finish.
+   No layout, typography, hero, gallery or responsive rules are changed. */
+#intro.intro {
+  background-color: #f7f5ed;
+  background-image:
+    radial-gradient(ellipse at 18% 24%, rgba(139,122,90,.045), transparent 57%),
+    radial-gradient(ellipse at 82% 78%, rgba(155,131,112,.035), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(105,94,75,.012) 0px, rgba(105,94,75,.012) 1px, transparent 1px, transparent 5px);
+}
+.brand-note {
+  background-image:
+    radial-gradient(ellipse at 22% 40%, rgba(123,108,80,.045), transparent 58%),
+    radial-gradient(ellipse at 78% 70%, rgba(139,111,92,.035), transparent 62%),
+    repeating-linear-gradient(0deg, rgba(100,89,70,.01) 0px, rgba(100,89,70,.01) 1px, transparent 1px, transparent 6px);
+}
