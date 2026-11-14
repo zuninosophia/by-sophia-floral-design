@@ -554,3 +554,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
+
+/* Restore original plain cream throughout inspiration section. */
+#inspiration.palette-section,
+#inspiration .palette-content,
+#inspiration .palette-content::before {
+  background-color: #f7f5ed !important;
+  background-image: none !important;
+}
+#inspiration .palette-content::before {
+  border: none !important;
+  box-shadow: none !important;
+}
+#inspiration.palette-section { box-shadow: none !important; }
