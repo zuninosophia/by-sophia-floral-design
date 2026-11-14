@@ -567,3 +567,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   box-shadow: none !important;
 }
 #inspiration.palette-section { box-shadow: none !important; }
+
+/* Meet Sophia: uploaded dusty rose embroidered lattice background. */
+#sophia.about {
+  background-color: #d99191 !important;
+  background-image: url("Dusty%20Rose%20Embroidered%20Lattice.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
