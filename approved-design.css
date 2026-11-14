@@ -527,13 +527,3 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-repeat: no-repeat;
 }
 
-/* Vintage embroidered floral textile for the slim announcement banner. */
-.announcement {
-  background-color: #e9bda9 !important;
-  background-image: linear-gradient(rgba(247,222,207,.18), rgba(247,222,207,.18)), url("Impressionistic%20Blush%20Floral%20Canvas.png") !important;
-  background-position: center center !important;
-  background-size: auto, 900px auto !important;
-  background-repeat: repeat !important;
-  color: #354331 !important;
-}
-.announcement a, .announcement span { color: #354331 !important; }
