@@ -576,3 +576,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
+
+/* Meet Sophia: switch to impressionistic blush floral canvas. */
+#sophia.about {
+  background-color: #efc5b4 !important;
+  background-image: url("Impressionistic%20Blush%20Floral%20Canvas.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
